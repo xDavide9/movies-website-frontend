@@ -27,7 +27,7 @@ const DiscoverInfo = () => {
   useEffect(() => {
     const options = {
       method: "GET",
-      url: "http://localhost:9000/.netlify/functions/api/discover/info",
+      url: "https://classy-sopapillas-5cb021.netlify.app/.netlify/functions/api/discover/info",
       params: { id: id, language: language },
     };
 

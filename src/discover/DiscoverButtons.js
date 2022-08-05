@@ -42,6 +42,7 @@ const DiscoverButtons = () => {
             defaultValue={0}
             onChange={(value) => setMinimumPopularity(value)}
           >
+            <Option value={0}>0</Option>
             <Option value={5}>5</Option>
             <Option value={10}>15</Option>
             <Option value={25}>25</Option>

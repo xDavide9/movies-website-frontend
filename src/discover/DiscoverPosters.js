@@ -15,7 +15,7 @@ const DiscoverPosters = (props) => {
   useEffect(() => {
     const options = {
       method: "GET",
-      url: `http://localhost:9000/.netlify/functions/api/discover/posters`,
+      url: `https://classy-sopapillas-5cb021.netlify.app/.netlify/functions/api/discover/posters`,
       params: {
         query: props.query,
         language: props.language,
