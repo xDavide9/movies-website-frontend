@@ -1,0 +1,18 @@
+.discover-buttons-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.discover-buttons-popularity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+@media (max-width: 500px) {
+  .discover-buttons-container {
+    justify-content: center;
+  }
+}

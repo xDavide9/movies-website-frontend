@@ -1,0 +1,60 @@
+.discover-posters-top-level-container {
+  margin: 20px;
+}
+
+.discover-posters-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.discover-poster {
+  width: 300px;
+  aspect-ratio: 30 / 45;
+}
+
+.discover-posters-wrapper {
+  position: relative;
+}
+
+.discover-posters-wrapper > .discover-poster-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: medium;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.discover-posters-wrapper > .discover-poster-content.discover-poster-fade {
+  opacity: 0;
+}
+
+.discover-posters-wrapper:hover
+  > .discover-poster-content.discover-poster-fade {
+  opacity: 1;
+}
+
+.discover-posters-wrapper > img,
+.discover-posters-wrapper > .discover-poster-content {
+  transition: 200ms ease-in-out;
+}
+
+/* to scale the pictures dynamically based on both width and height you have to take into account the aspect ratio of the page
+meaning a decrease in the height is going to be much less than the one for the width for each breakpoint */
+
+@media (max-width: 500px) {
+  .discover-poster {
+    width: 100px;
+  }
+}
+
+@media (max-height: 500px) {
+  .discover-poster {
+    width: 100px;
+  }
+}
