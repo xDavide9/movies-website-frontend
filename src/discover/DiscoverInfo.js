@@ -27,7 +27,7 @@ const DiscoverInfo = () => {
   useEffect(() => {
     const options = {
       method: "GET",
-      url: `${process.env.REACT_APP_REQUEST_ROOT}/.netlify/functions/api/discover/info`,
+      url: `https://quentertain-backend.netlify.app/.netlify/functions/api/discover/info`,
       params: { id: id, language: language },
     };
 
