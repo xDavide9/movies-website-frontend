@@ -1,4 +1,4 @@
-import "./DiscoverInfo.css";
+import "./SearchInfo.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -16,7 +16,7 @@ import { ClockCircleTwoTone } from "@ant-design/icons";
 const { Title, Paragraph, Text } = Typography;
 const { Item } = Descriptions;
 
-const DiscoverInfo = () => {
+const SearchInfo = () => {
   const { id, language } = useParams();
   const [isSuccessfulRequest, setSuccessfulRequest] = useState(false);
   const [film, setFilm] = useState([]);
@@ -27,7 +27,7 @@ const DiscoverInfo = () => {
   useEffect(() => {
     const options = {
       method: "GET",
-      url: `https://quentertain-backend.netlify.app/.netlify/functions/api/discover/info`,
+      url: `http://localhost:9000/.netlify/functions/api/search/info`,
       params: { id: id, language: language },
     };
 
@@ -60,25 +60,25 @@ const DiscoverInfo = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="discover-info-top-level-container"
+        className="search-info-top-level-container"
       >
-        <div className="discover-info-flex-container">
-          <div className="discover-info-flex-child-1">
-            <Title id="discover-info-title">{film.title}</Title>
-            <Paragraph id="discover-info-overview">
+        <div className="search-info-flex-container">
+          <div className="search-info-flex-child-1">
+            <Title id="search-info-title">{film.title}</Title>
+            <Paragraph id="search-info-overview">
               {film.overview === "" ? <></> : film.overview}
             </Paragraph>
-            <div className="discover-info-genre-runtime-container">
+            <div className="search-info-genre-runtime-container">
               {genres.length === 0 ? (
                 <></>
               ) : (
                 genres.map((genre) => (
-                  <span className="discover-info-genre-item discover-info-genre-gradient">
+                  <span className="search-info-genre-item search-info-genre-gradient">
                     {String(genre.name)}
                   </span>
                 ))
               )}
-              <Text id="discover-info-runtime">
+              <Text id="search-info-runtime">
                 <ClockCircleTwoTone /> {~~(film.runtime / 60)}h{" "}
                 {film.runtime % 60}m
               </Text>
@@ -165,7 +165,7 @@ const DiscoverInfo = () => {
               </Item>
             </Descriptions>
           </div>
-          <div className="discover-info-flex-child-2">
+          <div className="search-info-flex-child-2">
             <Image
               src={`https://image.tmdb.org/t/p/w500/${film.poster_path}`}
               alt="poster"
@@ -178,4 +178,4 @@ const DiscoverInfo = () => {
   return <Empty style={{ margin: "20px" }} />;
 };
 
-export default DiscoverInfo;
+export default SearchInfo;

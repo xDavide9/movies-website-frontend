@@ -22,10 +22,10 @@ const CustomLayout = (props) => {
             },
             {
               label: "Discover",
-              key: "/discover",
+              key: "/search",
               icon: <ArrowRightOutlined />,
               onClick: () => {
-                props.navigate("/discover");
+                props.navigate("/search");
               },
             },
           ]}

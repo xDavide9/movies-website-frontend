@@ -1,20 +1,19 @@
-import "./DiscoverButtons.css";
+import "./SearchButtons.css";
 import { useState } from "react";
 import { Input, Select, Tooltip } from "antd";
-import DiscoverPosters from "./DiscoverPosters";
+import SearchPosters from "./SearchPosters";
 import keywords from "./keywords";
 import { motion } from "framer-motion";
-import { QuestionCircleOutlined } from "@ant-design/icons";
 
 const { Search } = Input;
 const { Option } = Select;
 
-const DiscoverButtons = () => {
+const SearchButtons = () => {
   const [query, setQuery] = useState(
     () => keywords[Math.floor(Math.random() * keywords.length)]
   );
   const [language, setLanguage] = useState("en");
-  const [minimumPopularity, setMinimumPopularity] = useState(0);
+  const [minimumPopularity, setMinimumPopularity] = useState(15);
 
   return (
     <motion.div
@@ -23,7 +22,7 @@ const DiscoverButtons = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="discover-buttons-container">
+      <div className="search-buttons-container">
         <Select defaultValue="en" onChange={(value) => setLanguage(value)}>
           <Option value="en">English</Option>
           <Option value="it">Italian</Option>
@@ -37,28 +36,20 @@ const DiscoverButtons = () => {
             setQuery(value);
           }}
         />
-        <div className="discover-buttons-popularity">
+        <div className="search-buttons-popularity">
           <Select
-            defaultValue={0}
+            defaultValue={5}
             onChange={(value) => setMinimumPopularity(value)}
           >
-            <Option value={0}>0</Option>
-            <Option value={5}>5</Option>
-            <Option value={10}>15</Option>
-            <Option value={25}>25</Option>
-            <Option value={100}>100</Option>
-            <Option value={250}>250</Option>
-            <Option value={500}>500</Option>
+            <Option value={1.25}>Least Popular</Option>
+            <Option value={2.5}>Less Popular</Option>
+            <Option value={5}>Popular</Option>
+            <Option value={10}>More Popular</Option>
+            <Option value={20}>Most Popular</Option>
           </Select>
-          <Tooltip
-            color="blue"
-            title="Popularity of films is filtered based on this number. 0 means every film is listed while higher values gradually limit the amount of results."
-          >
-            <QuestionCircleOutlined />
-          </Tooltip>
         </div>
       </div>
-      <DiscoverPosters
+      <SearchPosters
         query={query}
         language={language}
         minimumPopularity={minimumPopularity}
@@ -67,4 +58,4 @@ const DiscoverButtons = () => {
   );
 };
 
-export default DiscoverButtons;
+export default SearchButtons;
