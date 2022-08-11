@@ -27,7 +27,7 @@ const SearchInfo = () => {
   useEffect(() => {
     const options = {
       method: "GET",
-      url: `http://localhost:9000/.netlify/functions/api/search/info`,
+      url: `https://quentertain-backend.netlify.app/.netlify/functions/api/search/info`,
       params: { id: id, language: language },
     };
 

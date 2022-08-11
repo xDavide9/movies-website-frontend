@@ -17,7 +17,7 @@ const SearchPosters = (props) => {
   useEffect(() => {
     const options = {
       method: "GET",
-      url: `http://localhost:9000/.netlify/functions/api/search/posters`,
+      url: `https://quentertain-backend.netlify.app/.netlify/functions/api/search/posters`,
       params: {
         query: props.query,
         language: props.language,
