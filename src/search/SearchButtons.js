@@ -8,7 +8,7 @@ const { Search } = Input;
 const { Option } = Select;
 
 const SearchButtons = () => {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState("asdfghjkl");
   const [language, setLanguage] = useState("en");
   const [minimumPopularity, setMinimumPopularity] = useState(15);
 
