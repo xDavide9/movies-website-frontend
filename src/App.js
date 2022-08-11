@@ -4,10 +4,8 @@ import { AnimatePresence } from "framer-motion";
 import ErrorPage from "./miscellaneous/ErrorPage";
 import Home from "./home/Home";
 import CustomLayout from "./miscellaneous/CustomLayout";
-import DiscoverButtons from "./discover/DiscoverButtons";
-import DiscoverInfo from "./discover/DiscoverInfo";
-
-// https://www.themoviedb.org/documentation/api/discover
+import SearchButtons from "./search/SearchButtons";
+import SearchInfo from "./search/SearchInfo";
 
 const App = () => {
   const navigate = useNavigate();
@@ -25,11 +23,11 @@ const App = () => {
       <AnimatePresence>
         <Routes location={location} key={location.pathname}>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/discover" element={<DiscoverButtons />} />
+          <Route exact path="/search" element={<SearchButtons />} />
           <Route
             exact
-            path="/discover/:id/:language"
-            element={<DiscoverInfo />}
+            path="/search/:id/:language"
+            element={<SearchInfo />}
           />
           <Route path="*" element={<ErrorPage />} />
         </Routes>

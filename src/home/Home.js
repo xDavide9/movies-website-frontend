@@ -4,23 +4,32 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import logo from "./tmdblogo.svg";
 
-const { Title } = Typography;
+const { Title, Text } = Typography;
 
 const Home = () => {
   const navigate = useNavigate();
 
   return (
     <motion.div
-      className="fullscreen home"
+      id="home"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <Title id="home-title">Quentertain</Title>
-      <img src={logo} alt="tdmb logo" className="tmdb-logo" />
-      <Button type="primary" onClick={() => navigate("/discover")}>
+      <div id="home-logo-container">
+        <Title id="home-title" level={1}>
+          Quentertain
+        </Title>
+        <div id="home-line"></div>
+        <Title level={3} id="home-subtitle">
+          Find Your Favourite Films And More
+        </Title>
+      </div>
+
+      <Button type="primary" onClick={() => navigate("/search")}>
         Start Now
       </Button>
+      <img src={logo} alt="tdmb logo" id="home-tmdb-logo" />
     </motion.div>
   );
 };

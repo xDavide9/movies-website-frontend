@@ -1,33 +1,45 @@
-.fullscreen {
+#home {
   position: absolute;
+  right: 0;
   left: 0;
   top: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
-}
-
-.home {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 100px;
+  gap: 50px;
   background: #001529;
   color: white;
 }
 
-@media (orientation: landscape) {
-  .fullscreen {
-    flex-direction: row;
-  }
+#home-logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #home-title {
-  font-size: 50px;
   color: white;
   margin: 0;
 }
 
-.tmdb-logo {
+#home-line {
+  background-color: white;
+  width: 275px;
+  height: 2px;
+  margin: 13px auto;
+}
+
+#home-subtitle {
+  font-weight: normal;
+  color: white;
+  margin: 0;
+}
+
+#home-tmdb-logo {
   width: 200px;
 }

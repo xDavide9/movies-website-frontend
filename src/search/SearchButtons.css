@@ -1,10 +1,10 @@
-.discover-buttons-container {
+.search-buttons-container {
   display: flex;
   justify-content: space-around;
   margin: 20px 0;
 }
 
-.discover-buttons-popularity {
+.search-buttons-popularity {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@
 }
 
 @media (max-width: 500px) {
-  .discover-buttons-container {
+  .search-buttons-container {
     justify-content: center;
   }
 }

@@ -21,11 +21,11 @@ const CustomLayout = (props) => {
               },
             },
             {
-              label: "Discover",
-              key: "/discover",
+              label: "Search",
+              key: "/search",
               icon: <ArrowRightOutlined />,
               onClick: () => {
-                props.navigate("/discover");
+                props.navigate("/search");
               },
             },
           ]}
