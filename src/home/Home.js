@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import logo from "./tmdblogo.svg";
 
-const { Title, Text } = Typography;
+const { Title } = Typography;
 
 const Home = () => {
   const navigate = useNavigate();

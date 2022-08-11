@@ -12,7 +12,6 @@ const SearchPosters = (props) => {
   const [isSuccessfulRequest, setSuccessfulRequest] = useState(false);
   const [results, setResults] = useState([]);
   const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState();
 
   useEffect(() => {
     const options = {
@@ -31,7 +30,6 @@ const SearchPosters = (props) => {
       .then((res) => {
         console.log(res);
         setResults(res.data.results);
-        setTotalPages(res.data.total_pages);
         setSuccessfulRequest(true);
       })
       .catch((err) => {
