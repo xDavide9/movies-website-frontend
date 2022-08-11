@@ -24,6 +24,7 @@
 
 #search-info-overview {
   margin: 10px 0;
+  text-align: justify;
 }
 
 .search-info-genre-runtime-container {
@@ -43,15 +44,11 @@
   border: none;
   background-size: 300% 100%;
   border-radius: 50px;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
 .search-info-genre-item:hover {
   background-position: 100% 0;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 

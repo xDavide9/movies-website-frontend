@@ -1,17 +1,14 @@
 import "./SearchButtons.css";
 import { useState } from "react";
-import { Input, Select, Tooltip } from "antd";
+import { Input, Select } from "antd";
 import SearchPosters from "./SearchPosters";
-import keywords from "./keywords";
 import { motion } from "framer-motion";
 
 const { Search } = Input;
 const { Option } = Select;
 
 const SearchButtons = () => {
-  const [query, setQuery] = useState(
-    () => keywords[Math.floor(Math.random() * keywords.length)]
-  );
+  const [query, setQuery] = useState("");
   const [language, setLanguage] = useState("en");
   const [minimumPopularity, setMinimumPopularity] = useState(15);
 

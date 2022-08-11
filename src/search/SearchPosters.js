@@ -6,6 +6,8 @@ import { Empty, Pagination, Typography, notification } from "antd";
 import { EyeOutlined } from "@ant-design/icons";
 import "./SearchPosters.css";
 
+const { Paragraph } = Typography;
+
 const SearchPosters = (props) => {
   const [isSuccessfulRequest, setSuccessfulRequest] = useState(false);
   const [results, setResults] = useState([]);
@@ -57,8 +59,27 @@ const SearchPosters = (props) => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ delay: 1 }}
+        className="search-posters-failed-response-container"
       >
-        <Empty style={{ margin: "20px 0" }} />
+        <Empty style={{ margin: "50px 0" }} />
+        <Paragraph className="search-posters-failed-response-paragraph">
+          Enter the title of your favourite films!
+        </Paragraph>
+        <Pagination
+          defaultCurrent={1}
+          total={1}
+          showSizeChanger={false}
+          pageSize="1"
+          current={page}
+          style={{ margin: "20px 0", textAlign: "center" }}
+          onChange={(value) => {
+            setPage(value);
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+        />
       </motion.div>
     );
 
@@ -71,8 +92,6 @@ const SearchPosters = (props) => {
     >
       <div className="search-posters-container">
         {results.map((result) => {
-          if (result.release_date === "" || result.poster_path === null)
-            return null;
           return (
             <Link to={`/search/${result.id}/${props.language}`}>
               <div className="search-posters-wrapper">
@@ -91,7 +110,7 @@ const SearchPosters = (props) => {
       </div>
       <Pagination
         defaultCurrent={1}
-        total={totalPages}
+        total={1}
         showSizeChanger={false}
         pageSize="1"
         current={page}

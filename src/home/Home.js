@@ -1,5 +1,5 @@
 import "./Home.css";
-import { Typography, Button, Divider } from "antd";
+import { Typography, Button } from "antd";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import logo from "./tmdblogo.svg";
@@ -11,13 +11,12 @@ const Home = () => {
 
   return (
     <motion.div
-      className="fullscreen home"
+      id="home"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="home-logo-container">
-        {/* replace with logo */}
+      <div id="home-logo-container">
         <Title id="home-title" level={1}>
           Quentertain
         </Title>
@@ -26,16 +25,11 @@ const Home = () => {
           Find Your Favourite Films And More
         </Title>
       </div>
-      <div>
-        <Title level={3} id="home-powered">
-          Powered By
-        </Title>
-        <img src={logo} alt="tdmb logo" className="tmdb-logo" />
-      </div>
-      {/* create a better button */}
-      {/* <Button type="primary" onClick={() => navigate("/search")}>
+
+      <Button type="primary" onClick={() => navigate("/search")}>
         Start Now
-      </Button> */}
+      </Button>
+      <img src={logo} alt="tdmb logo" id="home-tmdb-logo" />
     </motion.div>
   );
 };

@@ -2,6 +2,18 @@
   margin: 20px;
 }
 
+.search-posters-failed-response-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.search-posters-failed-response-paragraph {
+  font-size: large;
+}
+
 .search-posters-container {
   display: flex;
   justify-content: center;
@@ -34,8 +46,7 @@
   opacity: 0;
 }
 
-.search-posters-wrapper:hover
-  > .search-poster-content.search-poster-fade {
+.search-posters-wrapper:hover > .search-poster-content.search-poster-fade {
   opacity: 1;
 }
 

@@ -21,7 +21,7 @@ const CustomLayout = (props) => {
               },
             },
             {
-              label: "Discover",
+              label: "Search",
               key: "/search",
               icon: <ArrowRightOutlined />,
               onClick: () => {
