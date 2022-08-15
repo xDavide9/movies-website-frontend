@@ -27,7 +27,7 @@ const SearchInfo = () => {
   useEffect(() => {
     const options = {
       method: "GET",
-      url: `https://quentertain-backend.netlify.app/.netlify/functions/api/search/info`,
+      url: `${process.env.REACT_APP_HTTP_REQUESTS_BASE}/.netlify/functions/api/search/info`,
       params: { id: id, language: language },
     };
 
