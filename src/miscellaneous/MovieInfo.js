@@ -1,4 +1,4 @@
-import "./SearchInfo.css";
+import "./MovieInfo.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -16,7 +16,7 @@ import { ClockCircleTwoTone } from "@ant-design/icons";
 const { Title, Paragraph, Text } = Typography;
 const { Item } = Descriptions;
 
-const SearchInfo = () => {
+const MovieInfo = () => {
   const { id, language } = useParams();
   const [isSuccessfulRequest, setSuccessfulRequest] = useState(false);
   const [film, setFilm] = useState([]);
@@ -178,4 +178,4 @@ const SearchInfo = () => {
   return <Empty style={{ margin: "20px" }} />;
 };
 
-export default SearchInfo;
+export default MovieInfo;
