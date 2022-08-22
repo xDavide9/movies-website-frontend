@@ -1,6 +1,10 @@
 import "./CustomLayout.css";
 import { Layout, Menu } from "antd";
-import { ArrowRightOutlined, HomeOutlined } from "@ant-design/icons";
+import {
+  ArrowRightOutlined,
+  DoubleRightOutlined,
+  HomeOutlined,
+} from "@ant-design/icons";
 
 const { Header, Content, Footer } = Layout;
 
@@ -18,6 +22,14 @@ const CustomLayout = (props) => {
               icon: <HomeOutlined />,
               onClick: () => {
                 props.navigate("/");
+              },
+            },
+            {
+              label: "Discover",
+              key: "/discover",
+              icon: <DoubleRightOutlined />,
+              onClick: () => {
+                props.navigate("/discover");
               },
             },
             {

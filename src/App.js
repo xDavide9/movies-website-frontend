@@ -6,6 +6,7 @@ import Home from "./home/Home";
 import CustomLayout from "./miscellaneous/CustomLayout";
 import SearchButtons from "./search/SearchButtons";
 import MovieInfo from "./miscellaneous/MovieInfo";
+import Discover from "./discover/Discover";
 
 const App = () => {
   const navigate = useNavigate();
@@ -23,6 +24,7 @@ const App = () => {
       <AnimatePresence>
         <Routes location={location} key={location.pathname}>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/discover" element={<Discover />} />
           <Route exact path="/search" element={<SearchButtons />} />
           <Route exact path="/search/:id/:language" element={<MovieInfo />} />
           <Route path="*" element={<ErrorPage />} />
