@@ -1,0 +1,4 @@
+#discover-layout-top-level-container {
+  display: flex;
+  flex-direction: column;
+}
