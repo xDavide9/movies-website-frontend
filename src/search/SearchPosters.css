@@ -7,11 +7,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 50px;
-}
-
-.search-posters-failed-response-paragraph {
-  font-size: large;
 }
 
 .search-posters-container {

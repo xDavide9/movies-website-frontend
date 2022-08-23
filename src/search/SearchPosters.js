@@ -6,7 +6,7 @@ import { Empty, Pagination, Typography, notification } from "antd";
 import { EyeOutlined } from "@ant-design/icons";
 import "./SearchPosters.css";
 
-const { Paragraph } = Typography;
+const { Text } = Typography;
 
 const SearchPosters = (props) => {
   const [isSuccessfulRequest, setSuccessfulRequest] = useState(false);
@@ -54,24 +54,6 @@ const SearchPosters = (props) => {
     return (
       <motion.div className="search-posters-failed-response-container">
         <Empty style={{ margin: "50px 0" }} />
-        <Paragraph className="search-posters-failed-response-paragraph">
-          Enter the title of your favourite movies!
-        </Paragraph>
-        <Pagination
-          defaultCurrent={1}
-          total={1}
-          showSizeChanger={false}
-          pageSize="1"
-          current={page}
-          style={{ margin: "20px 0", textAlign: "center" }}
-          onChange={(value) => {
-            setPage(value);
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth",
-            });
-          }}
-        />
       </motion.div>
     );
 
@@ -87,9 +69,9 @@ const SearchPosters = (props) => {
                   src={`https://image.tmdb.org/t/p/w500/${result.poster_path}`}
                   alt="poster"
                 />
-                <Typography className="search-poster-content search-poster-fade">
+                <Text className="search-poster-content search-poster-fade">
                   Preview <EyeOutlined />
-                </Typography>
+                </Text>
               </div>
             </Link>
           );
