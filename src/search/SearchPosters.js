@@ -52,16 +52,10 @@ const SearchPosters = (props) => {
 
   if (!isSuccessfulRequest || results.length === 0)
     return (
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ delay: 1 }}
-        className="search-posters-failed-response-container"
-      >
+      <motion.div className="search-posters-failed-response-container">
         <Empty style={{ margin: "50px 0" }} />
         <Paragraph className="search-posters-failed-response-paragraph">
-          Enter the title of your favourite films!
+          Enter the title of your favourite movies!
         </Paragraph>
         <Pagination
           defaultCurrent={1}
@@ -82,12 +76,7 @@ const SearchPosters = (props) => {
     );
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="search-posters-top-level-container"
-    >
+    <motion.div className="search-posters-top-level-container">
       <div className="search-posters-container">
         {results.map((result) => {
           return (

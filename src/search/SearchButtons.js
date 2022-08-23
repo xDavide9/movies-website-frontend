@@ -13,12 +13,7 @@ const SearchButtons = () => {
   const [minimumPopularity, setMinimumPopularity] = useState(0);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      transition={{ delay: 0.3 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <motion.div>
       <div className="search-buttons-container">
         <Select defaultValue="en" onChange={(value) => setLanguage(value)}>
           <Option value="en">English</Option>

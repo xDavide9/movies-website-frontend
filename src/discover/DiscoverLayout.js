@@ -8,12 +8,7 @@ import { motion } from "framer-motion";
 
 const DiscoverLayout = () => {
   return (
-    <motion.div
-      id="discover-layout-top-level-container"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <motion.div id="discover-layout-top-level-container">
       <DiscoverPopular />
       <DiscoverRange />
       <DiscoverGenre />

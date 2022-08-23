@@ -10,19 +10,14 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <motion.div
-      id="home"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <motion.div id="home">
       <div id="home-logo-container">
         <Title id="home-title" level={1}>
           Quentertain
         </Title>
         <div id="home-line"></div>
         <Title level={3} id="home-subtitle">
-          Find Your Favourite Films And More
+          Information about your Favorite Movies
         </Title>
       </div>
 

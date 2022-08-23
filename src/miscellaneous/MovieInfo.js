@@ -56,12 +56,7 @@ const MovieInfo = () => {
 
   if (isSuccessfulRequest)
     return (
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="search-info-top-level-container"
-      >
+      <motion.div className="search-info-top-level-container">
         <div className="search-info-flex-container">
           <div className="search-info-flex-child-1">
             <Title id="search-info-title">{film.title}</Title>
