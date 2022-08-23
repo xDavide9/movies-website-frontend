@@ -1,34 +1,18 @@
 #home {
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 50px;
-  background: #001529;
   color: white;
-}
-
-#home-logo-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 #home-title {
-  color: white;
   margin: 0;
 }
 
 #home-line {
-  background-color: white;
+  background-color: black;
   width: 275px;
   height: 2px;
   margin: 13px auto;
@@ -36,7 +20,6 @@
 
 #home-subtitle {
   font-weight: normal;
-  color: white;
   margin: 0;
 }
 

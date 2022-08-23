@@ -11,15 +11,9 @@ const Home = () => {
 
   return (
     <motion.div id="home">
-      <div id="home-logo-container">
-        <Title id="home-title" level={1}>
-          Quentertain
-        </Title>
-        <div id="home-line"></div>
-        <Title level={3} id="home-subtitle">
-          Information about your Favorite Movies
-        </Title>
-      </div>
+      <Title id="home-title" level={1}>
+        Quentertain
+      </Title>
 
       <Button type="primary" onClick={() => navigate("/search")}>
         Start Now
