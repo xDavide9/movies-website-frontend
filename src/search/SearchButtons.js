@@ -3,12 +3,17 @@ import { useState } from "react";
 import { Input, Select } from "antd";
 import SearchPosters from "./SearchPosters";
 import { motion } from "framer-motion";
+import { useSearchParams } from "react-router-dom";
 
 const { Search } = Input;
 const { Option } = Select;
 
 const SearchButtons = () => {
-  const [query, setQuery] = useState("asdfghjkl");
+  const [searchParams, setSearchParams] = useSearchParams();
+  let query = "";
+  if (searchParams.get("q")) {
+    query = searchParams.get("q");
+  }
   const [language, setLanguage] = useState("en");
   const [minimumPopularity, setMinimumPopularity] = useState(0);
 
@@ -28,8 +33,9 @@ const SearchButtons = () => {
           style={{ width: "200px" }}
           onSearch={(value) => {
             if (value === "") return;
-            setQuery(value);
+            setSearchParams({ q: value });
           }}
+          defaultValue={query}
         />
         <div className="search-buttons-popularity">
           <Select
