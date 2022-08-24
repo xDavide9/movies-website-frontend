@@ -1,5 +1,61 @@
-.container {
-    height: 33.3%;
-    background: red;
-    border: black 2px solid;
+.poster {
+    width: 100px;
+    aspect-ratio: 30 / 45;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.wrapper > .content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: medium;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.wrapper > .content.fade {
+    opacity: 0;
+}
+
+.wrapper:hover > .content.fade {
+    opacity: 1;
+}
+
+.wrapper > img,
+.wrapper > .content {
+    transition: 200ms ease-in-out;
+}
+
+/* sm */
+@media (min-width: 576px) {
+    .poster {
+        width: 125px;
+    }
+}
+
+/* md */
+@media (min-width: 768px) {
+    .poster {
+        width: 150px;
+    }
+}
+
+/* lg */
+@media (min-width: 992px) {
+    .poster {
+        width: 175px;
+    }
+}
+
+/* xl */
+@media (min-width: 1200px) {
+    .poster {
+        width: 200px;
+    }
 }

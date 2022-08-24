@@ -10,8 +10,6 @@ const DiscoverLayout = () => {
   return (
     <motion.div className={styles.topLevelContainer}>
       <DiscoverPopular />
-      <DiscoverRange />
-      <DiscoverGenre />
     </motion.div>
   );
 };
