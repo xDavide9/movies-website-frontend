@@ -1,4 +1,4 @@
-import styles from "./DiscoverRow.module.css";
+import styles from "./DiscoverCommon.module.css";
 
 const DiscoverRange = () => {
   return <div className={styles.container}>Range</div>;

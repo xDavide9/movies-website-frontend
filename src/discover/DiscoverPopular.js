@@ -1,4 +1,5 @@
-import styles from "./DiscoverRow.module.css";
+import styles from "./DiscoverCommon.module.css";
+import "./CustomSlider.css";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Typography, notification } from "antd";
@@ -7,7 +8,7 @@ import axios from "axios";
 
 import Slider from "react-slick";
 
-const { Text } = Typography;
+const { Text, Title } = Typography;
 
 const DiscoverPopular = (props) => {
   const [results, setResults] = useState([]);
@@ -34,7 +35,7 @@ const DiscoverPopular = (props) => {
       });
   });
 
-  let settings = {
+  const settings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -44,24 +45,31 @@ const DiscoverPopular = (props) => {
   };
 
   return (
-    <Slider {...settings} className={styles.slider}>
-      {results.map((result) => {
-        return (
-          <Link to={`/search/${result.id}/${props.language}`}>
-            <div className={styles.wrapper}>
-              <img
-                className={styles.poster}
-                src={`https://image.tmdb.org/t/p/w500/${result.poster_path}`}
-                alt="poster"
-              />
-              <Text className={`${styles.content} ${styles.fade}`}>
-                Preview <EyeOutlined />
-              </Text>
-            </div>
-          </Link>
-        );
-      })}
-    </Slider>
+    <div>
+      <Title level={3} className={styles.title}>
+        Most Popular
+      </Title>
+      <div className={styles.sliderContainer}>
+        <Slider {...settings}>
+          {results.map((result) => {
+            return (
+              <Link to={`/search/${result.id}/${props.language}`}>
+                <div className={styles.wrapper}>
+                  <img
+                    className={styles.poster}
+                    src={`https://image.tmdb.org/t/p/w500/${result.poster_path}`}
+                    alt="poster"
+                  />
+                  <Text className={`${styles.content} ${styles.fade}`}>
+                    Preview <EyeOutlined />
+                  </Text>
+                </div>
+              </Link>
+            );
+          })}
+        </Slider>
+      </div>
+    </div>
   );
 };
 

@@ -1,0 +1,15 @@
+.slick-prev:before {
+    color: darkgray;
+}
+
+.slick-next:before {
+    color: darkgray;
+}
+
+.slick-slide > div {
+    display: grid;
+    place-items: center;
+    margin: auto;
+    width: 80%;
+}
+

@@ -1,4 +1,4 @@
-import styles from "./DiscoverRow.module.css";
+import styles from "./DiscoverCommon.module.css";
 
 const DiscoverGenre = () => {
   return <div className={styles.container}>Genre</div>;
