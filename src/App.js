@@ -18,6 +18,7 @@ const App = () => {
         <Routes location={location} key={location.pathname}>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/discover" element={<DiscoverLayout />} />
+          <Route exact path="/discover/:id/:language" element={<MovieInfo />} />
           <Route exact path="/search" element={<SearchSection />} />
           <Route exact path="/search/:id/:language" element={<MovieInfo />} />
           <Route path="*" element={<ErrorPage />} />

@@ -4,7 +4,7 @@
 
 .sliderContainer {
     margin: 15px auto;
-    width: 95%;
+    width: 75%;
 }
 
 .poster {
@@ -46,12 +46,20 @@
     .poster {
         width: 125px;
     }
+
+    .sliderContainer {
+        width: 80%;
+    }
 }
 
 /* md */
 @media (min-width: 768px) {
     .poster {
         width: 150px;
+    }
+
+    .sliderContainer {
+        width: 85%;
     }
 }
 
@@ -60,11 +68,19 @@
     .poster {
         width: 175px;
     }
+
+    .sliderContainer {
+        width: 90%;
+    }
 }
 
 /* xl */
 @media (min-width: 1200px) {
     .poster {
         width: 200px;
+    }
+
+    .sliderContainer {
+        width: 95%;
     }
 }
