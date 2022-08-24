@@ -1,33 +1,33 @@
-.search-info-top-level-container {
+.topLevelContainer {
   display: flex;
   justify-content: center;
 }
 
-.search-info-flex-container {
+.flexContainer {
   display: flex;
   justify-content: center;
   gap: 25px;
 }
 
-.search-info-flex-child-1 {
+.flexChild1 {
   width: 675px;
 }
 
-.search-info-flex-child-2 {
+.flexChild2 {
   width: 300px;
   margin-top: 68px;
 }
 
-#search-info-title {
+.title {
   margin: 10px 0;
 }
 
-#search-info-overview {
+.overview {
   margin: 10px 0;
   text-align: justify;
 }
 
-.search-info-genre-runtime-container {
+.genreRuntimeContainer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -35,7 +35,7 @@
   margin: 10px 0;
 }
 
-.search-info-genre-item {
+.genreItem {
   display: inline-block;
   padding: 10px;
   font-weight: 600;
@@ -47,16 +47,16 @@
   transition: all 0.4s ease-in-out;
 }
 
-.search-info-genre-item:hover {
+.genreItem:hover {
   background-position: 100% 0;
   transition: all 0.4s ease-in-out;
 }
 
-.search-info-genre-item:focus {
+.genreItem:focus {
   outline: none;
 }
 
-.search-info-genre-item.search-info-genre-gradient {
+.genreItem.genreGradient {
   background-image: linear-gradient(
     to right,
     #25aae1,
@@ -67,36 +67,36 @@
   box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
 }
 
-#search-info-runtime {
+.runtime {
   white-space: nowrap;
 }
 
 @media (max-width: 1090px) {
-  .search-info-flex-child-1 {
+  .flexChild1 {
     width: 585px;
   }
 
-  .search-info-flex-child-2 {
+  .flexChild2 {
     width: 255px;
   }
 }
 
 @media (max-width: 955px) {
-  .search-info-flex-container {
+  .flexContainer {
     gap: 0;
   }
 
-  .search-info-flex-child-1 {
+  .flexChild1 {
     width: 585px;
   }
 
-  .search-info-flex-child-2 {
+  .flexChild2 {
     display: none;
   }
 }
 
 @media (max-width: 675px) {
-  .search-info-flex-child-1 {
+  .flexChild1 {
     width: auto;
     margin-left: 17px;
     margin-right: 17px;
@@ -104,23 +104,23 @@
 }
 
 @media (max-width: 500px) {
-  .search-info-flex-child-1 {
+  .flexChild1 {
     width: auto;
   }
 
-  #search-info-title {
+  .title {
     font-size: 30px;
   }
 }
 
 @media (max-height: 500px) {
-  .search-info-flex-child-1 {
+  .flexChild1 {
     width: auto;
     margin-left: 17px;
     margin-right: 17px;
   }
 
-  #search-info-title {
+  .title {
     font-size: 30px;
   }
 }

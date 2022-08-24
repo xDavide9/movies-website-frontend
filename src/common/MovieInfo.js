@@ -1,4 +1,4 @@
-import "./MovieInfo.css";
+import styles from "./MovieInfo.module.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -56,24 +56,24 @@ const MovieInfo = () => {
 
   if (isSuccessfulRequest)
     return (
-      <motion.div className="search-info-top-level-container">
-        <div className="search-info-flex-container">
-          <div className="search-info-flex-child-1">
-            <Title id="search-info-title">{film.title}</Title>
-            <Paragraph id="search-info-overview">
+      <motion.div className={styles.topLevelContainer}>
+        <div className={styles.flexContainer}>
+          <div className={styles.flexChild1}>
+            <Title className={styles.title}>{film.title}</Title>
+            <Paragraph className={styles.overview}>
               {film.overview === "" ? <></> : film.overview}
             </Paragraph>
-            <div className="search-info-genre-runtime-container">
+            <div className={styles.genreRuntimeContainer}>
               {genres.length === 0 ? (
                 <></>
               ) : (
                 genres.map((genre) => (
-                  <span className="search-info-genre-item search-info-genre-gradient">
+                  <span className={`${styles.genreItem} ${styles.genreGradient}`}>
                     {String(genre.name)}
                   </span>
                 ))
               )}
-              <Text id="search-info-runtime">
+              <Text className={styles.runtime}>
                 <ClockCircleTwoTone /> {~~(film.runtime / 60)}h{" "}
                 {film.runtime % 60}m
               </Text>
@@ -160,7 +160,7 @@ const MovieInfo = () => {
               </Item>
             </Descriptions>
           </div>
-          <div className="search-info-flex-child-2">
+          <div className={styles.flexChild2}>
             <Image
               src={`https://image.tmdb.org/t/p/w500/${film.poster_path}`}
               alt="poster"

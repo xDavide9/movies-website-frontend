@@ -1,4 +1,4 @@
-import "./CustomLayout.css";
+import styles from "./CustomLayout.module.css";
 import { Layout, Menu } from "antd";
 import {
   ArrowRightOutlined,
@@ -11,7 +11,7 @@ const { Header, Content, Footer } = Layout;
 const CustomLayout = (props) => {
   return (
     <Layout>
-      <Header id="header">
+      <Header className={styles.header}>
         <Menu
           theme="dark"
           mode="horizontal"
@@ -44,8 +44,8 @@ const CustomLayout = (props) => {
           selectedKeys={[props.location.pathname]}
         />
       </Header>
-      <Content id="content">{props.children}</Content>
-      <Footer id="footer">2022 Quentertain & TMDb.</Footer>
+      <Content className={styles.content}>{props.children}</Content>
+      <Footer className={styles.footer}>2022 Quentertain & TMDb.</Footer>
     </Layout>
   );
 };

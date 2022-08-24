@@ -1,4 +1,4 @@
-import "./DiscoverPopular.css";
+import styles from "./DiscoverRow.module.css";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Typography, notification } from "antd";
@@ -25,7 +25,7 @@ const DiscoverPopular = (props) => {
     };
   });
 
-  return <div id="discover-popular-container">Popular</div>;
+  return <div className={styles.container}>Popular</div>;
 };
 
 export default DiscoverPopular;

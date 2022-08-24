@@ -1,0 +1,16 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  color: white;
+}
+
+.title {
+  margin: 0;
+}
+
+.tmdbLogo {
+  width: 200px;
+}

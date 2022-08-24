@@ -1,22 +1,22 @@
-#header {
+.header {
   position: sticky;
   z-index: 2;
   top: 0;
   width: 100%;
 }
 
-#content {
+.content {
   min-height: 80vh;
   margin: 25px 25px 0 25px;
   background: white;
 }
 
-#footer {
+.footer {
   text-align: center;
 }
 
 @media (max-width: 500px) {
-  #content {
+  .content {
     margin: 0px;
   }
 }

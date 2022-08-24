@@ -1,4 +1,4 @@
-import "./Home.css";
+import styles from "./Home.module.css";
 import { Typography, Button } from "antd";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -10,15 +10,14 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <motion.div id="home">
-      <Title id="home-title" level={1}>
+    <motion.div className={styles.home}>
+      <Title className={styles.title} level={1}>
         Quentertain
       </Title>
-
       <Button type="primary" onClick={() => navigate("/search")}>
         Start Now
       </Button>
-      <img src={logo} alt="tdmb logo" id="home-tmdb-logo" />
+      <img src={logo} alt="tdmb logo" className={styles.tmdbLogo} />
     </motion.div>
   );
 };

@@ -1,4 +1,4 @@
-import "./DiscoverLayout.css";
+import styles from "./DiscoverLayout.module.css";
 import DiscoverGenre from "./DiscoverGenre";
 import DiscoverPopular from "./DiscoverPopular";
 import DiscoverRange from "./DiscoverRange";
@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const DiscoverLayout = () => {
   return (
-    <motion.div id="discover-layout-top-level-container">
+    <motion.div className={styles.topLevelContainer}>
       <DiscoverPopular />
       <DiscoverRange />
       <DiscoverGenre />

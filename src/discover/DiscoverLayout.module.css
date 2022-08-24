@@ -1,4 +1,4 @@
-#discover-layout-top-level-container {
+.topLevelContainer {
   display: flex;
   flex-direction: column;
   height: 80vh;

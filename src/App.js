@@ -1,11 +1,11 @@
 import "./App.css";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import ErrorPage from "./miscellaneous/ErrorPage";
+import ErrorPage from "./common/ErrorPage";
 import Home from "./home/Home";
-import CustomLayout from "./miscellaneous/CustomLayout";
-import SearchButtons from "./search/SearchButtons";
-import MovieInfo from "./miscellaneous/MovieInfo";
+import CustomLayout from "./common/CustomLayout";
+import SearchSection from "./search/SearchSection";
+import MovieInfo from "./common/MovieInfo";
 import DiscoverLayout from "./discover/DiscoverLayout";
 
 const App = () => {
@@ -18,7 +18,7 @@ const App = () => {
         <Routes location={location} key={location.pathname}>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/discover" element={<DiscoverLayout />} />
-          <Route exact path="/search" element={<SearchButtons />} />
+          <Route exact path="/search" element={<SearchSection />} />
           <Route exact path="/search/:id/:language" element={<MovieInfo />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
