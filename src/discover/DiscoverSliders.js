@@ -29,9 +29,13 @@ const DiscoverSliders = (props) => {
   useEffect(() => {
     // most popular films
     axios
-      .get(
-        `${process.env.REACT_APP_HTTP_REQUESTS_BASE}/.netlify/functions/api/discover/popular`
-      )
+      .request({
+        method: "GET",
+        url: `${process.env.REACT_APP_HTTP_REQUESTS_BASE}/.netlify/functions/api/discover/popular`,
+        params: {
+          language: `${props.language}`,
+        },
+      })
       .then((res) => {
         console.log(res);
         setPopularResults(res.data.results);
@@ -57,6 +61,7 @@ const DiscoverSliders = (props) => {
         method: "GET",
         params: {
           year: year,
+          language: `${props.language}`,
         },
       })
       .then((res) => {
@@ -83,6 +88,7 @@ const DiscoverSliders = (props) => {
         method: "GET",
         params: {
           genre: genre,
+          language: `${props.language}`,
         },
       })
       .then((res) => {
