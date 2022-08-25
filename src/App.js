@@ -19,7 +19,11 @@ const App = () => {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/discover" element={<DiscoverSliders />} />
           <Route exact path="/discover/:id/:language" element={<MovieInfo />} />
-          <Route exact path="/search" element={<SearchField />} />
+          <Route
+            exact
+            path="/search"
+            element={<SearchField language={"en"} />}
+          />
           <Route exact path="/search/:id/:language" element={<MovieInfo />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>

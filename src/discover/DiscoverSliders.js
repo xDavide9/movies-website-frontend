@@ -26,8 +26,6 @@ const DiscoverSliders = (props) => {
     years.push(i);
   }
 
-  let genres;
-
   useEffect(() => {
     // most popular films
     axios
