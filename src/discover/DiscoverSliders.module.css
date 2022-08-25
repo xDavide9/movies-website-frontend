@@ -24,6 +24,8 @@
 }
 
 .wrapper > .content {
+    width: 100px;
+    aspect-ratio: 30 / 45;
     position: absolute;
     inset: 0;
     display: flex;
@@ -57,6 +59,10 @@
     .sliderContainer {
         width: 80%;
     }
+
+    .wrapper > .content {
+        width: 125px;
+    }
 }
 
 /* md */
@@ -67,6 +73,10 @@
 
     .sliderContainer {
         width: 85%;
+    }
+
+    .wrapper > .content {
+        width: 150px;
     }
 }
 
@@ -79,6 +89,10 @@
     .sliderContainer {
         width: 90%;
     }
+
+    .wrapper > .content {
+        width: 175px;
+    }
 }
 
 /* xl */
@@ -89,5 +103,9 @@
 
     .sliderContainer {
         width: 95%;
+    }
+
+    .wrapper > .content {
+        width: 200px;
     }
 }
