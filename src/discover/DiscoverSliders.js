@@ -6,17 +6,27 @@ import { Typography, notification } from "antd";
 import { EyeOutlined } from "@ant-design/icons";
 import axios from "axios";
 import settings from "./slider";
+import { Select } from "antd";
 
 import Slider from "react-slick";
 
 const { Text, Title } = Typography;
+const { Option } = Select;
 
 const DiscoverSliders = (props) => {
   const [popularResults, setPopularResults] = useState([]);
   const [year, setYear] = useState(2008);
   const [yearResults, setYearResults] = useState([]);
   const [genre, setGenre] = useState(28); // action
+  const [genreList, setGenreList] = useState([{ id: -1, name: "NA" }]);
   const [genreResults, setGenreResults] = useState([]);
+
+  const years = [];
+  for (let i = 1888; i < new Date().getFullYear() + 1; i++) {
+    years.push(i);
+  }
+
+  let genres;
 
   useEffect(() => {
     // most popular films
@@ -69,26 +79,6 @@ const DiscoverSliders = (props) => {
   }, [year]);
 
   useEffect(() => {
-    // with genre films
-    // 28 action
-    // 12 adventure
-    // 16 animation
-    // 35 comedy
-    // 80 crime
-    // 99 documentary
-    // 18 drama
-    // 10751 family
-    // 14 fantasy
-    // 36 history
-    // 27 horror
-    // 10402 music
-    // 9648 mystery
-    // 10749 romance
-    // 878 science fiction
-    // 10770 tv movie
-    // 53 thriller
-    // 10752 war
-    // 37 western
     axios
       .request({
         url: `${process.env.REACT_APP_HTTP_REQUESTS_BASE}/.netlify/functions/api/discover/genre`,
@@ -113,6 +103,19 @@ const DiscoverSliders = (props) => {
         console.log(err);
       });
   }, [genre]);
+
+  useEffect(() => {
+    axios
+      .get(
+        `${process.env.REACT_APP_HTTP_REQUESTS_BASE}/.netlify/functions/api/config/genres`
+      )
+      .then((res) => {
+        setGenreList(res.data.genres);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <div className={styles.topLevelContainer}>
@@ -139,9 +142,16 @@ const DiscoverSliders = (props) => {
           })}
         </Slider>
       </div>
-      <Title level={3} className={styles.title}>
-        From Year {year}
-      </Title>
+      <div className={styles.flex}>
+        <Title level={3} className={styles.title}>
+          From Year
+        </Title>
+        <Select defaultValue="2008" onChange={(value) => setYear(value)}>
+          {years.map((year) => {
+            return <Option value={year}>{year}</Option>;
+          })}
+        </Select>
+      </div>
       <div className={styles.sliderContainer}>
         <Slider {...settings}>
           {yearResults.map((result) => {
@@ -162,9 +172,16 @@ const DiscoverSliders = (props) => {
           })}
         </Slider>
       </div>
-      <Title level={3} className={styles.title}>
-        With Genre {genre}
-      </Title>
+      <div className={styles.flex}>
+        <Title level={3} className={styles.title}>
+          With Genre
+        </Title>
+        <Select defaultValue={28} onChange={(value) => setGenre(value)}>
+          {genreList.map((genre) => (
+            <Option value={genre.id}>{genre.name}</Option>
+          ))}
+        </Select>
+      </div>
       <div className={styles.sliderContainer}>
         <Slider {...settings}>
           {genreResults.map((result) => {

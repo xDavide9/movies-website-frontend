@@ -4,13 +4,19 @@
     min-height: 80vh;
 }
 
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .title {
     margin: 15px;
     text-align: center;
 }
 
 .sliderContainer {
-    margin: 15px auto;
+    margin: 25px auto;
     width: 75%;
 }
 
