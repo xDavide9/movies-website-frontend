@@ -1,16 +1,29 @@
-.home {
+.topLevelContainer {
+  margin: 15px 25px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 50px;
-  color: white;
+
 }
 
-.title {
-  margin: 0;
+.logo {
+
+}
+
+li {
+  margin: 50px auto;
+}
+
+.fontMedium {
+  font-size: medium;
+}
+
+.fontSmall {
+  font-size: small;
+  font-weight: bold;
 }
 
 .tmdbLogo {
   width: 200px;
+  margin-bottom: 50px;
 }
