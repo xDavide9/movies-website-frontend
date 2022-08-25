@@ -1,5 +1,12 @@
+.topLevelContainer {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+
 .title {
-    margin: 15px 60px;
+    margin: 15px;
+    text-align: center;
 }
 
 .sliderContainer {

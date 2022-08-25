@@ -1,16 +1,17 @@
-import styles from "./DiscoverCommon.module.css";
-import "./CustomSlider.css";
+import styles from "./DiscoverSliders.module.css";
+import "./slider.css";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Typography, notification } from "antd";
 import { EyeOutlined } from "@ant-design/icons";
 import axios from "axios";
+import settings from "./slider";
 
 import Slider from "react-slick";
 
 const { Text, Title } = Typography;
 
-const DiscoverPopular = (props) => {
+const DiscoverSliders = (props) => {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
@@ -35,47 +36,8 @@ const DiscoverPopular = (props) => {
       });
   });
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 6,
-    slidesToScroll: 6,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 5,
-        },
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-    ],
-  };
-
   return (
-    <div>
+    <div className={styles.topLevelContainer}>
       <Title level={3} className={styles.title}>
         Most Popular
       </Title>
@@ -103,4 +65,4 @@ const DiscoverPopular = (props) => {
   );
 };
 
-export default DiscoverPopular;
+export default DiscoverSliders;
