@@ -1,7 +1,7 @@
 .topLevelContainer {
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    min-height: 80vh;
 }
 
 .title {
