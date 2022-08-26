@@ -5,6 +5,7 @@ import {
   DoubleRightOutlined,
   HomeOutlined,
 } from "@ant-design/icons";
+import "./menu.css";
 
 const { Header, Content, Footer } = Layout;
 
