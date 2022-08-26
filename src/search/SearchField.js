@@ -3,6 +3,7 @@ import { Input } from "antd";
 import SearchPosters from "./SearchPosters";
 import { motion } from "framer-motion";
 import { useSearchParams } from "react-router-dom";
+import { pageTransition } from "../common/animations";
 
 const { Search } = Input;
 
@@ -14,7 +15,7 @@ const SearchField = (props) => {
   }
 
   return (
-    <motion.div>
+    <motion.div {...pageTransition}>
       <div className={styles.container}>
         <Search
           placeholder="input search text"

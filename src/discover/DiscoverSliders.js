@@ -2,11 +2,12 @@ import styles from "./DiscoverSliders.module.css";
 import "./slider.css";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Typography, notification } from "antd";
+import { notification, Select, Typography } from "antd";
 import { EyeOutlined } from "@ant-design/icons";
 import axios from "axios";
 import settings from "./slider";
-import { Select } from "antd";
+import { motion } from "framer-motion";
+import { pageTransition } from "../common/animations";
 
 import Slider from "react-slick";
 
@@ -122,7 +123,7 @@ const DiscoverSliders = (props) => {
   }, []);
 
   return (
-    <div className={styles.topLevelContainer}>
+    <motion.div className={styles.topLevelContainer} {...pageTransition}>
       <Title level={3} className={styles.title}>
         Most Popular
       </Title>
@@ -206,7 +207,7 @@ const DiscoverSliders = (props) => {
           })}
         </Slider>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

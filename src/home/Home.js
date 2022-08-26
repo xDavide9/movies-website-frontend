@@ -3,6 +3,7 @@ import { Button, Select, Typography } from "antd";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import logo from "./tmdblogo.svg";
+import { pageTransition } from "../common/animations";
 
 const { Title, Paragraph } = Typography;
 const { Option } = Select;
@@ -11,7 +12,7 @@ const Home = (props) => {
   const navigate = useNavigate();
 
   return (
-    <motion.div className={styles.topLevelContainer}>
+    <motion.div className={styles.topLevelContainer} {...pageTransition}>
       <ul>
         <li>
           <Title level={3}>Language</Title>

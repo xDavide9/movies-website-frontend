@@ -12,6 +12,7 @@ import {
   Typography,
 } from "antd";
 import { ClockCircleTwoTone } from "@ant-design/icons";
+import { pageTransition, zoomInOnHover } from "./animations";
 
 const { Title, Paragraph, Text } = Typography;
 const { Item } = Descriptions;
@@ -56,7 +57,7 @@ const MovieInfo = () => {
 
   if (isSuccessfulRequest)
     return (
-      <motion.div className={styles.topLevelContainer}>
+      <motion.div className={styles.topLevelContainer} {...pageTransition}>
         <div className={styles.flexContainer}>
           <div className={styles.flexChild1}>
             <Title className={styles.title}>{film.title}</Title>
@@ -68,11 +69,12 @@ const MovieInfo = () => {
                 <></>
               ) : (
                 genres.map((genre) => (
-                  <span
+                  <motion.span
+                    {...zoomInOnHover}
                     className={`${styles.genreItem} ${styles.genreGradient}`}
                   >
                     {String(genre.name)}
-                  </span>
+                  </motion.span>
                 ))
               )}
               <Text className={styles.runtime}>
