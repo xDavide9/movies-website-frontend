@@ -7,7 +7,7 @@ import logo from "./tmdblogo.svg";
 const { Title, Paragraph } = Typography;
 const { Option } = Select;
 
-const Home = () => {
+const Home = (props) => {
   const navigate = useNavigate();
 
   return (
@@ -18,7 +18,10 @@ const Home = () => {
           <Paragraph className={styles.fontMedium}>
             Please Select Your desired Language
           </Paragraph>
-          <Select defaultValue="en">
+          <Select
+            defaultValue={props.defaultLanguage}
+            onChange={(language) => props.setLanguage(language)}
+          >
             <Option value="en">English</Option>
             <Option value="it">Italian</Option>
             <Option value="de">German</Option>
