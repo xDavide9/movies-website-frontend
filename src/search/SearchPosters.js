@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Empty, Pagination, Typography, notification } from "antd";
+import { Empty, notification, Typography } from "antd";
 import { EyeOutlined } from "@ant-design/icons";
 import styles from "./SearchPosters.module.css";
 

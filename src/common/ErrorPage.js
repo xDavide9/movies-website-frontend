@@ -1,4 +1,4 @@
-import { Typography, Row, Empty } from "antd";
+import { Empty, Row, Typography } from "antd";
 
 const { Title, Paragraph } = Typography;
 

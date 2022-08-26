@@ -1,5 +1,5 @@
 import styles from "./Home.module.css";
-import { Typography, Button, Select } from "antd";
+import { Button, Select, Typography } from "antd";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import logo from "./tmdblogo.svg";

@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
-  Empty,
-  Typography,
-  Image,
   Descriptions,
-  Tooltip,
+  Empty,
+  Image,
   notification,
+  Tooltip,
+  Typography,
 } from "antd";
 import { ClockCircleTwoTone } from "@ant-design/icons";
 
@@ -68,7 +68,9 @@ const MovieInfo = () => {
                 <></>
               ) : (
                 genres.map((genre) => (
-                  <span className={`${styles.genreItem} ${styles.genreGradient}`}>
+                  <span
+                    className={`${styles.genreItem} ${styles.genreGradient}`}
+                  >
                     {String(genre.name)}
                   </span>
                 ))

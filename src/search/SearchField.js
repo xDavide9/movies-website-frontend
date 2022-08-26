@@ -1,6 +1,5 @@
 import styles from "./SearchField.module.css";
-import { useState } from "react";
-import { Input, Select } from "antd";
+import { Input } from "antd";
 import SearchPosters from "./SearchPosters";
 import { motion } from "framer-motion";
 import { useSearchParams } from "react-router-dom";

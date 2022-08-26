@@ -51,7 +51,7 @@ const DiscoverSliders = (props) => {
         });
         console.log(err);
       });
-  }, []);
+  }, [props.language]);
 
   useEffect(() => {
     // from year films
@@ -79,7 +79,7 @@ const DiscoverSliders = (props) => {
         });
         console.log(err);
       });
-  }, [year]);
+  }, [year, props.language]);
 
   useEffect(() => {
     axios
@@ -106,7 +106,7 @@ const DiscoverSliders = (props) => {
         });
         console.log(err);
       });
-  }, [genre]);
+  }, [genre, props.language]);
 
   useEffect(() => {
     axios
