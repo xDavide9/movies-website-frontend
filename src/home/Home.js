@@ -1,15 +1,25 @@
 import styles from "./Home.module.css";
-import { Button, Select, Typography } from "antd";
+import { Button, notification, Select, Typography } from "antd";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import logo from "./tmdblogo.svg";
 import { pageTransition } from "../common/animations";
+import { useEffect } from "react";
 
 const { Title, Paragraph } = Typography;
 const { Option } = Select;
 
 const Home = (props) => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    notification.warn({
+      title: "Privacy Policy",
+      message:
+        "This Application does NOT collect any form of Personal Information from its Users.",
+      placement: "bottomRight",
+    });
+  }, []);
 
   return (
     <motion.div className={styles.topLevelContainer} {...pageTransition}>
