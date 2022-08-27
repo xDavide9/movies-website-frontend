@@ -22,25 +22,27 @@ const SearchPosters = (props) => {
       },
     };
 
-    axios
-      .request(options)
-      .then((res) => {
-        console.log(res);
-        setResults(res.data.results);
-        setSuccessfulRequest(true);
-      })
-      .catch((err) => {
-        notification.error({
-          message: `Error ${err.response.status}`,
-          description: (
-            <>
-              {err.message} <br /> {err.response.data}
-            </>
-          ),
+    if (props.query) {
+      axios
+        .request(options)
+        .then((res) => {
+          console.log(res);
+          setResults(res.data.results);
+          setSuccessfulRequest(true);
+        })
+        .catch((err) => {
+          notification.error({
+            message: `Error ${err.response.status}`,
+            description: (
+              <>
+                {err.message} <br /> {err.response.data}
+              </>
+            ),
+          });
+          console.log(err);
+          setSuccessfulRequest(false);
         });
-        console.log(err);
-        setSuccessfulRequest(false);
-      });
+    }
   }, [props.query, props.language]);
 
   if (!isSuccessfulRequest || results.length === 0)
