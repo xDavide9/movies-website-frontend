@@ -16,3 +16,11 @@ https://www.quentertain.com
 - Discover movies based on Popularity, Year and Genre
 - Search a movie based on its title
 - Get details on those movies
+
+### Contribution
+If you wish to Contribute to the Project you will need:
+
+-  `.env` File with the `API_KEY` Env Variable set to the value of an Api Key to get from [themoviedb.org](https://www.themoviedb.org/) 
+
+### Credits
+<img src="src/home/tmdblogo.svg" width="500" height="260" alt="TMDb">
