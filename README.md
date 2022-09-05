@@ -6,11 +6,13 @@
 
 https://www.quentertain.com
 
-> Discover information about your favourite films!
+> Discover information about your favourite movies!
 
 ### Features
 
 - Made with [React](https://reactjs.org/) and [Ant Design](https://ant.design/)
 - Deployed on [Netlify](https://www.netlify.com/)
 - Connects to [this](https://github.com/xDavide9/Quentertain-backend) backend
-- Search a movie based on its title and get its details
+- Discover movies based on Popularity, Year and Genre
+- Search a movie based on its title
+- Get details on those movies
