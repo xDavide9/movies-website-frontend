@@ -1,30 +1,62 @@
 .topLevelContainer {
-  margin: 15px 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+    margin: 15px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
-.logo {
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+.gap {
+    gap: 50px;
+}
+
+.appearOnTablet {
+    display: none;
 }
 
 li {
-  margin: 50px auto;
-  list-style-type: none;
+    margin: 50px auto;
+    list-style-type: none;
 }
 
 .fontMedium {
-  font-size: medium;
+    font-size: medium;
 }
 
 .fontSmall {
-  font-size: small;
-  font-weight: bold;
+    font-size: small;
+    font-weight: bold;
 }
 
 .tmdbLogo {
-  width: 200px;
-  margin-bottom: 50px;
+    width: 200px;
+    margin-bottom: 50px;
+}
+
+.appLogo {
+    width: 200px;
+    margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+    .topLevelContainer {
+        flex-direction: row;
+        gap: 100px;
+    }
+
+    .appearOnTablet {
+        display: block;
+    }
+
+    .disappearOnTablet {
+        display: none;
+    }
 }
