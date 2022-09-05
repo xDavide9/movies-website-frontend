@@ -20,7 +20,7 @@ https://www.quentertain.com
 ### Contribution
 If you wish to Contribute to the Project you will need:
 
--  `.env` File with the `API_KEY` Env Variable set to the value of an Api Key to get from [themoviedb.org](https://www.themoviedb.org/) 
+-  `.env` File with the `API_KEY` Env Variable set to the value of an Api Key to get from [themoviedb.org](https://www.themoviedb.org/)
 
 ### Credits
 <img src="src/home/tmdblogo.svg" width="500" height="260" alt="TMDb">
