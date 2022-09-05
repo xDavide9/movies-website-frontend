@@ -1,0 +1,13 @@
+.marginTop {
+    margin-top: 2%;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    font-size: large;
+}
