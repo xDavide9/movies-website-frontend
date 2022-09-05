@@ -12,6 +12,7 @@
 
 li {
   margin: 50px auto;
+  list-style-type: none;
 }
 
 .fontMedium {
