@@ -1,17 +1,18 @@
 import styles from "./DiscoverSliders.module.css";
 import "./slider.css";
-import {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
-import {notification, Select, Typography} from "antd";
-import {EyeOutlined} from "@ant-design/icons";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { notification, Select, Typography } from "antd";
+import { EyeOutlined } from "@ant-design/icons";
 import axios from "axios";
 import settings from "./slider";
-import {motion} from "framer-motion";
-import {pageTransition} from "../common/animations";
+import { motion } from "framer-motion";
+import { pageTransition } from "../common/animations";
 import Slider from "react-slick";
 import Loading from "../common/Loading";
+import { Helmet } from "react-helmet";
 
-const {Text, Title} = Typography;
+const { Text, Title } = Typography;
 const {Option} = Select;
 
 const DiscoverSliders = (props) => {
@@ -131,11 +132,20 @@ const DiscoverSliders = (props) => {
             <motion.div {...pageTransition}>
                 <Loading/>
             </motion.div>
-        )
+        );
     }
 
     return (
         <motion.div className={styles.topLevelContainer} {...pageTransition}>
+            <Helmet>
+                <title>Discover Info About your Favourite Movies!</title>
+                <meta
+                    name="description"
+                    content="Discover Information About your Favourite Movies by how Popular they are,
+                when they were Released, and to which genre category they belong.
+                You can click on any cover to get the Info!"
+                />
+            </Helmet>
             <Title level={3} className={styles.title}>
                 Most Popular
             </Title>

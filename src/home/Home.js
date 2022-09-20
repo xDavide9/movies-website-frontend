@@ -6,6 +6,7 @@ import tmdbLogo from "./tmdblogo.svg";
 import appLogo from "./applogo.svg";
 import {pageTransition} from "../common/animations";
 import {useEffect} from "react";
+import {Helmet} from "react-helmet";
 
 const {Title, Paragraph} = Typography;
 const {Option} = Select;
@@ -24,6 +25,12 @@ const Home = (props) => {
 
     return (
         <motion.div className={styles.topLevelContainer} {...pageTransition}>
+            <Helmet>
+                <title>Information About Movies!</title>
+                <meta name="description" content="Quentertain shows any type of information related to your favourite movies.
+                These include release-date, genre, brief description, cover and more... there are multiple ways of finding results
+                making it convenient for everyone's needs." />
+            </Helmet>
             <div className={`${styles.container} ${styles.gap}`}>
                 <img src={appLogo} alt="app logo" className={styles.appLogo}/>
                 <div className={styles.appearOnTablet}>

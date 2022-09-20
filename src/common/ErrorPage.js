@@ -1,10 +1,18 @@
 import { Empty, Row, Typography } from "antd";
+import { Helmet } from "react-helmet";
 
 const { Title, Paragraph } = Typography;
 
 const ErrorPage = () => {
   return (
     <>
+      <Helmet>
+        <title>404</title>
+        <meta
+          name="description"
+          content="The page you request was not found."
+        />
+      </Helmet>
       <Row align="center" style={{ paddingTop: "10%" }}>
         <Title style={{ fontSize: "5em" }}>ERROR 404</Title>
       </Row>

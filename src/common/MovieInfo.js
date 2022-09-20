@@ -13,6 +13,7 @@ import {
 } from "antd";
 import { ClockCircleTwoTone } from "@ant-design/icons";
 import { pageTransition, zoomInOnHover } from "./animations";
+import { Helmet } from "react-helmet";
 
 const { Title, Paragraph, Text } = Typography;
 const { Item } = Descriptions;
@@ -58,6 +59,14 @@ const MovieInfo = () => {
   if (isSuccessfulRequest)
     return (
       <motion.div className={styles.topLevelContainer} {...pageTransition}>
+        <Helmet>
+          <title>The Information You Requested on any Movie!</title>
+          <meta
+            name="description"
+            content="This page contains all the information about a specific movie you wished to know
+          more about!"
+          />
+        </Helmet>
         <div className={styles.flexContainer}>
           <div className={styles.flexChild1}>
             <Title className={styles.title}>{film.title}</Title>
