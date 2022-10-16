@@ -48,7 +48,7 @@ const SearchPosters = (props) => {
   if (!isSuccessfulRequest || results.length === 0)
     return (
       <motion.div className={styles.failedResponseContainer}>
-        <Empty style={{ margin: "50px 0" }} />
+        <Empty/>
       </motion.div>
     );
 
