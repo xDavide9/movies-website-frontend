@@ -11,6 +11,7 @@ const { Header, Content, Footer } = Layout;
 
 const CustomLayout = (props) => {
   return (
+    <div className={styles.container}>
     <Layout>
       <Header className={styles.header}>
         <Menu
@@ -48,6 +49,7 @@ const CustomLayout = (props) => {
       <Content className={styles.content}>{props.children}</Content>
       <Footer className={styles.footer}>2022 Quentertain & TMDb.</Footer>
     </Layout>
+    </div>
   );
 };
 
