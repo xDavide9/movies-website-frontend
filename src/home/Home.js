@@ -18,7 +18,7 @@ const Home = (props) => {
         notification.warn({
             title: "Privacy Policy",
             message:
-                "This Application does NOT collect any form of Personal Information from its Users.",
+                "This application does NOT collect any form of personal information from its users.",
             placement: "bottomRight",
         });
     }, []);
@@ -28,7 +28,7 @@ const Home = (props) => {
             <Helmet>
                 <title>Information About Movies!</title>
                 <meta name="description" content="Quentertain shows any type of information related to your favourite movies.
-                These include release-date, genre, brief description, cover and more... there are multiple ways of finding results
+                These include release-date, genre, brief description, cover and more... there are multiple ways to find results
                 making it convenient for everyone's needs." />
             </Helmet>
             <div className={`${styles.container} ${styles.gap}`}>
@@ -44,7 +44,7 @@ const Home = (props) => {
                     <li>
                         <Title level={3}>Language</Title>
                         <Paragraph className={styles.fontMedium}>
-                            Please Select Your desired Language
+                            Select a language
                         </Paragraph>
                         <Select
                             defaultValue={props.defaultLanguage}
@@ -60,7 +60,7 @@ const Home = (props) => {
                     <li>
                         <Title level={3}>Discover</Title>
                         <Paragraph className={styles.fontMedium}>
-                            Discover new Movies based on Popularity, Year and Genre
+                            Discover new movies
                         </Paragraph>
                         <Button type="primary" onClick={() => navigate("/discover")}>
                             Discover Now
@@ -69,7 +69,7 @@ const Home = (props) => {
                     <li>
                         <Title level={3}>Search</Title>
                         <Paragraph className={styles.fontMedium}>
-                            Search a specific Movie with its Title
+                            Search a specific movie
                         </Paragraph>
                         <Button type="primary" onClick={() => navigate("/search")}>
                             Search Now
