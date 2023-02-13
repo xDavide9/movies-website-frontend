@@ -18,6 +18,8 @@ https://www.quentertain.com
 - Get details on those movies
 
 ### Contribution
+Someone who's better than me at creating a UI would be much appreciated :D
+
 If you wish to Contribute to the Project you will need:
 
 -  `.env` File with the line `REACT_APP_HTTP_REQUESTS_BASE=http://localhost:9000`
